@@ -7,11 +7,13 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).keypress(function() {
+$("#start-game").click(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
+    $("#start-game").toggleClass("hidden");
     nextSequence();
     started = true;
+    //nextSequence();
   }
 });
 
@@ -53,7 +55,8 @@ function checkAnswer(currentLevel) {
 
       playSound("wrong");
       reset();
-      $("#level-title").text("Game Over! Press any key to continue");
+      $("#level-title").text("Game Over! Click to Restart");
+      $("#start-game").toggleClass("hidden");
 
     }
 
