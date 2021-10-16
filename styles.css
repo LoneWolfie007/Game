@@ -16,7 +16,7 @@ body {
 
   background-color: #011F3F;
   background-image: url("play.png");
-  background-size: 50px;
+  background-size: 100%;
   margin: auto;
   height: 80px;
   width: 80px;
